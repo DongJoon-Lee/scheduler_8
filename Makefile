@@ -1,8 +1,8 @@
-run : scheduler.o
-	gcc -o run scheduler.o -g
+main : main.o
+	gcc -o main main.o -g -lpthread
 
-scheduler.o : scheduler.c
-	gcc -c -o scheduler.o -g scheduler.c
+main.o : main.c
+	gcc -c -o main.o -g main.c
 
-clean:
-	rm *.o scheduler
+clean :
+	rm *.o main
