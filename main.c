@@ -21,7 +21,7 @@ int main(void) {
 	puts("Scheduling test start.\n"); // just notification
 
 	FCFS(test, param, processNum); // Run FCFS Scheduling
-	
+	RR(test, param, processNum); // Run RR Scheduling
 
 	return 0;
 }
