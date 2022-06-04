@@ -14,6 +14,8 @@ void FCFS(pthread_t *Test, process_param *Process, int N) { // FCFS main functio
 	
 	printf("main thread [%ld]\n", gettid()); // main thread's id
 
+        pthread_mutex_init(&mutex, NULL);
+
 	for(int i = 0; i < N; i ++) {
 		pthread_create(&Test[i], NULL, FCFS_Run, &Process[i]); // create thread
 	}
