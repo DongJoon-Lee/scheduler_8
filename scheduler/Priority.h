@@ -30,10 +30,10 @@ void quick_sort_by_priority(process_param *arr, int len)
 void *PRIORITY_Run(void *);
 
 void PRIORITY(pthread_t *Test, process_param *Process, int N) {
-
-    __u64 time = 0;
-    int completed[100];
+    __u64 time = 0; 
+    int completed[100]={0};
 	int i;
+	pthread_mutex_init(&mutex, NULL);
     puts("PRIORITY Scheduling Test.\n");
     printf("main thread [%ld]\n", gettid()); // main thread's id
 
@@ -43,7 +43,9 @@ void PRIORITY(pthread_t *Test, process_param *Process, int N) {
 	for (i=0; i<N; i++){
 		printf("%lld\n",Process[i].burstTime);
 	}*/
-
+	/*for(int i = 0; i < 100; i ++) {
+		completed[i] = 0;
+	}*/
 
     while (1)
     {
@@ -52,7 +54,7 @@ void PRIORITY(pthread_t *Test, process_param *Process, int N) {
     		/* 실행X, 도착한 프로세스인 경우 */
     		if ((completed[i] == 0) && (Process[i].arrivalTime <= time))
     		{
-						pthread_create(&Test[i], NULL, PRIORITY_Run, (&Process[i]));
+				        pthread_create(&Test[i], NULL, PRIORITY_Run, (&Process[i]));
 						pthread_join(Test[i], NULL);
 						completed[i] = 1;
 						time += Process[i].burstTime;

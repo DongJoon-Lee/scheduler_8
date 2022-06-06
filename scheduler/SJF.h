@@ -115,7 +115,7 @@ void *SJF_Run(void *data) {
 	pthread_mutex_unlock(&mutex);	// mutex unlock
 	pthread_exit(0);
 }
-
+/*
 // compare function used for quickSort_by_arrivalTime
 int compare_by_arrivalTime(const void *a, const void *b) {
 	process_param *pA = (process_param *)a;
@@ -133,6 +133,7 @@ int compare_by_arrivalTime(const void *a, const void *b) {
 			return 1;
 	}
 }
+*/
 
 // a function executing quicksort by arrival time
 void quickSort_by_arrivalTime(process_param *p, int len) {
