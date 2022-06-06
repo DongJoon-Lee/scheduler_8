@@ -21,6 +21,7 @@ int main(void) {
 	puts("Scheduling test start.\n"); // just notification
 
 	FCFS(test, param, processNum); // Run FCFS Scheduling
+	SJF(test, param, processNum);	// Run SJF Scheduling	
 	RR(test, param, processNum); // Run RR Scheduling
 	PRIORITY(test, param, processNum); // Run Priority Scheduling
 
