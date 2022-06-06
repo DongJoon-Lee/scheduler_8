@@ -19,6 +19,7 @@
 
 // Scheduler declare part
 #include "./scheduler/FCFS.h"
+#include "./scheduler/SJF.h"
 
 // Tools declare part
 //#include "./scheduler/Tools.h"
