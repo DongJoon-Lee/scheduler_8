@@ -22,6 +22,8 @@ int main(void) {
 
 	FCFS(test, param, processNum); // Run FCFS Scheduling
 	SJF(test, param, processNum);	// Run SJF Scheduling	
+	RR(test, param, processNum); // Run RR Scheduling
+	PRIORITY(test, param, processNum); // Run Priority Scheduling
 
 	return 0;
 }
