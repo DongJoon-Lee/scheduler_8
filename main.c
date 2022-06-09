@@ -3,6 +3,7 @@
 int processNum; // Number of Processes
 
 int main(void) {
+	makeProcses(5);
 	FILE *file = fopen("processList.txt", "r"); // open Process List file.
 	if (file == NULL) { // if fail
 		printf("Fail to open file.\n");
@@ -21,7 +22,9 @@ int main(void) {
 	puts("Scheduling test start.\n"); // just notification
 
 	FCFS(test, param, processNum); // Run FCFS Scheduling
-	SJF(test, param, processNum);	// Run SJF Scheduling	
+	SJF(test, param, processNum);	// Run SJF Scheduling
+	RR(test, param, processNum);	// Run RR Schedulling
+	PRIORITY(test, param, processNum);	// Run Priority Scheduling
 
 	return 0;
 }
