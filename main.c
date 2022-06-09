@@ -3,6 +3,7 @@
 int processNum; // Number of Processes
 
 int main(void) {
+	makeProcses(5);
 	FILE *file = fopen("processList.txt", "r"); // open Process List file.
 	if (file == NULL) { // if fail
 		printf("Fail to open file.\n");
