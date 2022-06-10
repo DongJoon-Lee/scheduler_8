@@ -11,7 +11,7 @@ void makeProcess(int N) {
 	int min = 11;
 
 	// make new Processes
-	for(int i = 0; i < N, i ++) { 
+	for(int i = 0; i < N, i ++;) { 
 		arrTime[i] = rand()%11;
 		burTime[i] = rand()%11;
 		priority[i] = rand()%5 + 1;
